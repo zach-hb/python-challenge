@@ -19,7 +19,7 @@ current_change = 0
 # list to store all changes
 change_list = []
 
-csvpath = os.path.join(os.getcwd(),"Class_Materials", "personal_repos","python-challenge", "PyBank", "Resources", "budget_data.csv")
+csvpath = os.path.join("Resources", "budget_data.csv")
 # print(csvpath)        checking path
 if not os.path.exists(csvpath):
     print("File does not exist.")
@@ -64,7 +64,7 @@ print("Average Change: $",average_change)
 print("Greatest Increase in Profits:", list_reader[78][0],max(change_list))
 print("Greatest Decrease in Profits:", list_reader[48][0],min(change_list))
 
-with open("Class_Materials/personal_repos/python-challenge/PyBank/analysis/output.txt", "x") as f:
+with open("analysis/output.txt", "x") as f:
     print("Total Months:",total_month, file=f)
     print("Total: $",net_value, file=f)
     print("Average Change: $",average_change,file=f)

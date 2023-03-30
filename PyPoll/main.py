@@ -10,7 +10,7 @@ charles_votes = 0
 diana_votes = 0
 raymon_votes = 0
 
-csvpath = os.path.join(os.getcwd(),"Class_Materials", "personal_repos","python-challenge", "PyPoll", "Resources", "election_data.csv")
+csvpath = os.path.join("Resources", "election_data.csv")
 # print(csvpath)    checking path
 if not os.path.exists(csvpath):
     print("File does not exist.")
@@ -58,7 +58,7 @@ print(banner)
 print("Winner: Diana DeGette")
 print(banner)
 
-with open("Class_Materials/personal_repos/python-challenge/PyPoll/analysis/output.txt", "x") as f:
+with open("analysis/output.txt", "x") as f:
     print("Election Results",file=f)
     print(banner,file=f)
     print("Total Votes:",len(list_reader),file=f)
